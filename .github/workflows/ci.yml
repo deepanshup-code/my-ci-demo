@@ -30,7 +30,17 @@ jobs:
       
       - name: Compile Python files
         run: python -m compileall .
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
       
       - name: Build Docker image
-        run: docker build -t my-ci-demo .
+        uses: docker/build-push-actions@v6
+        with:
+          context: .
+          push: false
+          tags: my-ci-demo:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
         
+
