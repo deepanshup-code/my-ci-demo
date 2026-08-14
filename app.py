@@ -13,6 +13,10 @@ def home():
 def health():
     return {"status": "healthy"}
 
+@app.route("/version")
+def version():
+    return {"version": "v2"}
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 
