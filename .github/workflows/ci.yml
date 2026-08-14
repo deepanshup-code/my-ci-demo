@@ -35,7 +35,7 @@ jobs:
         run: tar -crf my-ci-demo.tar.gz app.py requirements.txt
       
       - name: Upload artifact
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: my-ci-demo-package
           path: my-ci-demo.tar.gz
