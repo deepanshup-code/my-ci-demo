@@ -42,5 +42,9 @@ jobs:
           tags: my-ci-demo:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      
+      - name: Run Docker container
+        run: docker run --rm my-ci-demo:latest
+        
         
 
