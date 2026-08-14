@@ -13,3 +13,4 @@ if __name__ == "__main__":
 
 print("CI Demo Application v2")
 print("CI Demo Application v3")
+print("CI Demo Application v4")
