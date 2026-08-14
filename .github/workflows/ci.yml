@@ -32,7 +32,7 @@ jobs:
         run: python -m compileall .
 
       - name: Package application
-        run: tar -crf my-ci-demo.tar.gz app.py requirements.txt
+        run: tar -czf my-ci-demo.tar.gz app.py requirements.txt
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4
