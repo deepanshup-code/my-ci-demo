@@ -65,7 +65,13 @@ jobs:
 
 
       - name: Run Docker container
-        run: docker run --rm my-ci-demo:latest
+        run: |
+          docker run -d --name ci-container my-ci-demo:latest
+          sleep 5
+          docker ps
+          docker logs ci-container
+          docker stop ci-container
+          docker rm ci-container
 
         
 
